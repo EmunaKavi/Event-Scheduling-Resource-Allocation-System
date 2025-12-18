@@ -1,5 +1,7 @@
 # Event Scheduling & Resource Allocation System
 
+![Dashboard Preview](dashboard_preview.png)
+
 A full-stack web application for scheduling events and allocating shared resources (rooms, equipment, instructors) with built-in conflict detection and reporting.
 
 ## Features
