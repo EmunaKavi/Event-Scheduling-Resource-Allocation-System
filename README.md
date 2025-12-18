@@ -2,11 +2,12 @@
 ![Dashboard](dashboard.png)
 
 ## Demo Video
-<video src="demo-video.mp4" controls="controls" style="max-width: 100%;">
-    Your browser does not support the video tag.
+<video width="100%" controls>
+  <source src="demo-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
-<br>
-*(If the video doesn't play, [download it here](demo-video.mp4))*
+
+If the video doesn't play, [download it here](demo-video.mp4).
 
 ## Feature Previews
 | **Resource Management** | **Event Management** |
