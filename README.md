@@ -1,5 +1,3 @@
-# Event Scheduling & Resource Allocation System
-
 ## Dashboard
 ![Dashboard](dashboard.png)
 
@@ -66,7 +64,7 @@ Existing.start_time < New.end_time AND Existing.end_time > New.start_time
 This ensures that no two events using the same resource can overlap in time.
 
 ## Contact
-Submitted by: [Your Name]
+Submitted by: [Emuna D]
 
 ## Test Cases Covered
 
