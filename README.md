@@ -1,11 +1,5 @@
 ## Dashboard
-![Dashboard](dashboard.png)
-
-## Demo Video
-<video width="100%" controls>
-  <source src="demo-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the Demo Video](dashboard.png)](demo-video.mp4)
 
 If the video doesn't play, [download it here](demo-video.mp4).
 
