@@ -1,10 +1,10 @@
 ## Dashboard
-![Dashboard](dashboard.png)
+![Dashboard](Dashboard.png)
 
 ## Feature Previews
 | **Resource Management** | **Event Management** |
 |:---:|:---:|
-| ![Resources](resources.png) | ![Events](events.png) |
+| ![Resource Management](Resource%20Management.png) | ![Event Management](Event%20Management.png) |
 
 A full-stack web application for scheduling events and allocating shared resources (rooms, equipment, instructors) with built-in conflict detection and reporting.
 
