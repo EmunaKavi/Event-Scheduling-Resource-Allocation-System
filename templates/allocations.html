@@ -48,18 +48,26 @@
 <script src="/static/js/main.js"></script>
 <script>
     async function loadOptions() {
-        const [events, resources] = await Promise.all([
-            apiCall('/events'),
-            apiCall('/resources')
+        const [eventsData, resourcesData] = await Promise.all([
+            apiCall('/events?per_page=100&upcoming=true'),
+            apiCall('/resources?per_page=100')
         ]);
 
         const eventSelect = document.getElementById('event-select');
-        eventSelect.innerHTML = '<option value="">-- Choose Event --</option>' +
-            events.map(e => `<option value="${e.id}">${e.title} (${new Date(e.start_time).toLocaleDateString()})</option>`).join('');
+        if (eventsData.items.length === 0) {
+            eventSelect.innerHTML = '<option value="">No upcoming events found</option>';
+        } else {
+            eventSelect.innerHTML = '<option value="">-- Choose Event --</option>' +
+                eventsData.items.map(e => `<option value="${e.id}">${e.title} (${new Date(e.start_time).toLocaleDateString()})</option>`).join('');
+        }
 
         const resSelect = document.getElementById('resource-select');
-        resSelect.innerHTML = '<option value="">-- Choose Resource --</option>' +
-            resources.map(r => `<option value="${r.id}">${r.name} (${r.type})</option>`).join('');
+        if (resourcesData.items.length === 0) {
+            resSelect.innerHTML = '<option value="">No resources found</option>';
+        } else {
+            resSelect.innerHTML = '<option value="">-- Choose Resource --</option>' +
+                resourcesData.items.map(r => `<option value="${r.id}">${r.name} (${r.type})</option>`).join('');
+        }
     }
 
     document.getElementById('allocation-form').addEventListener('submit', async (e) => {
